@@ -7,12 +7,12 @@ int main(int argc, char const *argv[])
 {
     ListaGen *lista = criaLista();
 
-    Aluno *a1 = InicializaAluno(1, "gabriel", 10.0);
+    Aluno *a1 = InicializaAluno(1, "gabriel", 9.0);
     lista = insereLista(lista, a1);
-    Aluno *a2 = InicializaAluno(13, "emerson", 10.0);
+    Aluno *a2 = InicializaAluno(13, "emerson", 9.0);
     lista = insereLista(lista, a2);
 
-    Aluno *a3 = InicializaAluno(132, "maria", 10.0);
+    Aluno *a3 = InicializaAluno(132, "maria", 9.0);
     lista = insereLista(lista, a3);
 
     Aluno *a4 = InicializaAluno(144, "henriques", 10.0);
@@ -47,7 +47,7 @@ int main(int argc, char const *argv[])
 
     //Retorna a media
     float media = mediaTurma(lista);
-    printf("\nA media da Turma é: %.2f\n", media);
+    // printf("\nA media da Turma é: %.2f\n", media); -->^Problema Valgrind
 
     liberaLista(lista);
 
@@ -57,6 +57,7 @@ int main(int argc, char const *argv[])
     ApagaAluno(a4);
     ApagaAluno(a5);
     ApagaAluno(a6);
+    ApagaAluno(a7);
 
     return 0;
 }

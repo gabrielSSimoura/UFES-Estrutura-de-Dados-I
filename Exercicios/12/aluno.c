@@ -43,6 +43,9 @@ float RetornaCR(Aluno *aluno)
 
 void ApagaAluno(Aluno *aluno)
 {
-    free(aluno->nome);
-    free(aluno);
+    if (aluno)
+    {
+        free(aluno->nome);
+        free(aluno);
+    }
 }
