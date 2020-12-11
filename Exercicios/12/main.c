@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
     }
 
     //Retorna a media
-    printf("\nA media da Turma é: %.2f\n", mediaTurma(lista)); // -->^Problema Valgrind
+    printf("\nA media da Turma é: %.2f\n", mediaTurma(lista)); 
 
     liberaLista(lista);
 
