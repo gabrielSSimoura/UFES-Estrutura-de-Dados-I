@@ -57,10 +57,12 @@ void imprimeListaAlunos(ListaGen *lista)
 float mediaTurma(ListaGen *lista)
 {
     struct cr *acumulado = (struct cr *)malloc(sizeof(struct cr));
+    acumulado->CR = 0.0;
+    acumulado->n = 0;
+
     percorreLista(lista, acumula, acumulado);
 
-    float media = 0.0;
-    media = acumulado->CR / acumulado->n;
+    float media = acumulado->CR / acumulado->n;
 
     free(acumulado);
     return media;
